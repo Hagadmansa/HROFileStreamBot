@@ -27,14 +27,16 @@ HELP_TEXT = """<b>ℹ️ HELP</b>
 • Add me to your channel or group I will add download links there.
 • All links will be permanent and have the fastest download support.
 
-<b❗️NOTE:</b>
+<b❗️>NOTE:</b>
 
 • I must be an admin in your Channel/Group.
 • Don't forget to give all permissions otherwise I will not work.
 
-<b🔞 WARNING:</b>
+<b>🔞 WARNING:</b>
 
 • 18+ Content will permanently ban you."""
+
+INSTRUCTIONS_TEXT = """ Don't send photos to bot send as files otherwise bot will not send link."""
 
 ABOUT_TEXT = """<b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
@@ -57,9 +59,12 @@ START_BUTTONS = InlineKeyboardMarkup(
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
+            InlineKeyboardButton('⚙️ Instructions', callback_data='help'),
+            InlineKeyboardButton('🦚 Peacock', url='https://google.com')
+            ],[
             InlineKeyboardButton('🏠 Home', callback_data='home'),
             InlineKeyboardButton('🔐 Close', callback_data='close')
-            ]]
+        ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
