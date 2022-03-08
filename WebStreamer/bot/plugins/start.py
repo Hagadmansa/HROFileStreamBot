@@ -12,7 +12,7 @@ db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 START_TEXT = """
 👋 Hello {},
 
-🤖 My Name is Hagadmansa Bot, I can stream Telegram Files over HTTP
+🤖 My Name is Hagadmansa Mega Bot, I can stream Telegram Files over HTTP
 
 🧐 Don't know how to do? No worries, just press the help button.
 
