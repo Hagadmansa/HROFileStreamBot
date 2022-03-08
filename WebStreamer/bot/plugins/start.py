@@ -27,7 +27,7 @@ HELP_TEXT = """<b>ℹ️ HELP</b>
 • Add me to your channel or group I will add download links there.
 • All links will be permanent and have the fastest download support.
 
-<b❗️>NOTE:</b>
+<b>❗️NOTE:</b>
 
 • I must be an admin in your Channel/Group.
 • Don't forget to give all permissions otherwise I will not work.
@@ -59,7 +59,7 @@ START_BUTTONS = InlineKeyboardMarkup(
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('⚙️ Instructions', callback_data='help'),
+            InlineKeyboardButton('⚙️ Instructions', callback_data='instructions'),
             InlineKeyboardButton('🦚 Peacock', url='https://google.com')
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='home'),
@@ -70,6 +70,12 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🏠 Home', callback_data='home'),
             InlineKeyboardButton('🔐 Close', callback_data='close')
+            ]]
+    )
+INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🔙 Back', callback_data='help'),
+            InlineKeyboardButton('🏠 Home', callback_data='home')
             ]]
     )
 
