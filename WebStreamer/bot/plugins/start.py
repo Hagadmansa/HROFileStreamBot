@@ -45,12 +45,6 @@ INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
 3. Don't send 18+ content or pornographic videos, you will be banned.
 4. All links will be permanent and have the fastest download support."""
 
-TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Tutorials
-
-<b>🧩 Tutorials:</b>
-
-All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. And don't forget to subscribe my updates channel <b>@hagadmansa.</b>"""
-
 ABOUT_TEXT = """<b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
 <b>✯ Library:</b> <a href='https://pyrogram.org'>Pyrogram</a>
@@ -74,7 +68,7 @@ START_BUTTONS = InlineKeyboardMarkup(
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('⚙️ Instructions', callback_data='instructions'),
-            InlineKeyboardButton('❤️ Tutorials', callback_data='tutorials')
+            InlineKeyboardButton('❤️ Tutorials', url='https://t.me/hagadmansa')
             ],[
             InlineKeyboardButton('🔙 Back', callback_data='home'),
             InlineKeyboardButton('📣 Updates', url='https://t.me/hagadmansa')
@@ -94,12 +88,6 @@ INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('🏠 Home', callback_data='home')
             ]]
     )
-
-TUTORIALS_BUTTONS = InlineKeyboardMarkup(
-        [[
-            InlineKeyboardButton('🔙 Back', callback_data='help'),
-            InlineKeyboardButton('🏠 Home', callback_data='home')
-            ]]
 
 @StreamBot.on_callback_query()
 async def cb_data(bot, update):
@@ -127,12 +115,6 @@ async def cb_data(bot, update):
             disable_web_page_preview=True,
             reply_markup=INSTRUCTIONS_BUTTONS
         )
-    elif update.data == "tutorials":
-        await update.message.edit_text(
-            text=TUTORIALS_TEXT,
-            disable_web_page_preview=True,
-            reply_markup=TUTORIALS_BUTTONS
-        ) 
     else:
         await update.message.delete()
 
