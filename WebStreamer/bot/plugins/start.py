@@ -49,7 +49,7 @@ TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Tutorials
 
 <b>🧩 Tutorials:</b>
 
-All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. And don;t forget to subscribe my updates channel <b>@hagadmansa.</b>"""
+All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. And don't forget to subscribe my updates channel <b>@hagadmansa.</b>"""
 
 ABOUT_TEXT = """<b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
