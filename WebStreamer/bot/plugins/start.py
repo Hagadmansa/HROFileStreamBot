@@ -36,7 +36,20 @@ HELP_TEXT = """<b>ℹ️ HELP</b>
 
 • 18+ Content will permanently ban you."""
 
-INSTRUCTIONS_TEXT = """ Don't send photos to bot send as files otherwise bot will not send link."""
+INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
+
+<b>🧩 Instructions:</b>
+
+1. Don't send photos to the bot, send them as a file.
+2. Don't send multiple files at a time, send them one by one.
+3. Don't send 18+ content or pornographic videos, you will be banned.
+4. All links will be permanent and have the fastest download support."""
+
+TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Tutorials
+
+<b>🧩 Tutorials:</b>
+
+All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. And don;t forget to subscribe my updates channel <b>@hagadmansa.</b>"""
 
 ABOUT_TEXT = """<b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
@@ -57,27 +70,36 @@ START_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
     )
+
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('⚙️ Instructions', callback_data='instructions'),
-            InlineKeyboardButton('🦚 Peacock', url='https://google.com')
+            InlineKeyboardButton('❤️ Tutorials', callback_data='tutorials')
             ],[
-            InlineKeyboardButton('🏠 Home', callback_data='home'),
-            InlineKeyboardButton('🔐 Close', callback_data='close')
+            InlineKeyboardButton('🔙 Back', callback_data='home'),
+            InlineKeyboardButton('📣 Updates', url='https://t.me/hagadmansa')
         ]]
     )
+
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🏠 Home', callback_data='home'),
             InlineKeyboardButton('🔐 Close', callback_data='close')
             ]]
     )
+
 INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🔙 Back', callback_data='help'),
             InlineKeyboardButton('🏠 Home', callback_data='home')
             ]]
     )
+
+TUTORIALS_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🔙 Back', callback_data='help'),
+            InlineKeyboardButton('🏠 Home', callback_data='home')
+            ]]
 
 @StreamBot.on_callback_query()
 async def cb_data(bot, update):
@@ -105,6 +127,13 @@ async def cb_data(bot, update):
             disable_web_page_preview=True,
             reply_markup=INSTRUCTIONS_BUTTONS
         )
+        
+    elif update.data == "tutorials":
+        await update.message.edit_text(
+            text=TUTORIALS_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=TUTORIALS_BUTTONS
+        ) 
     else:
         await update.message.delete()
 
