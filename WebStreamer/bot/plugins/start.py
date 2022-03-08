@@ -99,6 +99,12 @@ async def cb_data(bot, update):
             disable_web_page_preview=True,
             reply_markup=ABOUT_BUTTONS
         )
+    elif update.data == "instructions":
+        await update.message.edit_text(
+            text=INSTRUCTIONS_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=INSTRUCTIONS_BUTTONS
+        )
     else:
         await update.message.delete()
 
