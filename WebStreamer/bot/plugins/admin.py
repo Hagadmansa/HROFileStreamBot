@@ -84,8 +84,8 @@ async def broadcast_(c, m):
             quote=True
         )
     os.remove('broadcast.txt')
-    
-    @StreamBot.on_message(filters.command('donate'))
+   
+@StreamBot.on_message(filters.command('donate'))
 async def command(b, m:Message):
      await m.reply_text(
           text="""<b>😊 About</b>
