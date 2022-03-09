@@ -103,9 +103,7 @@ Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansarobot-review'>
 
 Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot'>here</a>.
 
-Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>
-
-<b>🌐 Our Website - www.hagadmansa.com</b>""".
+Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>.""".
 
 SOURCE_TEXT = """<b>😊 About</b> > Source
 
