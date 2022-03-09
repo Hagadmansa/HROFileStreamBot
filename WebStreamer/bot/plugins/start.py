@@ -264,7 +264,7 @@ async def start(b, m):
         await db.add_user(m.from_user.id)
         await b.send_message(
             Var.BIN_CHANNEL,
-            f"**New User Joined** \n\n**My New Friend** [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started your bot"
+            f"[{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started bot."
         )
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "/start":
@@ -282,7 +282,7 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>🔐 Join my updates channel to use me.</i>",
+                    text="🔐 Join my updates channel to use me.",
                     reply_markup=InlineKeyboardMarkup(
                         [[
                             InlineKeyboardButton("📡 Join Now", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
@@ -381,7 +381,7 @@ async def help_handler(bot, message):
         await db.add_user(message.from_user.id)
         await bot.send_message(
             Var.BIN_CHANNEL,
-            f"New User Joined \n\nName: [{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started your bot!"
+            f"[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started bot."
         )
     if Var.UPDATES_CHANNEL is not None:
         try:
