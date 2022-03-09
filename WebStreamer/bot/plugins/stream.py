@@ -107,7 +107,7 @@ async def channel_receive_handler(bot, broadcast):
                                     Var.PORT,
                                     log_msg.message_id)
         await log_msg.reply_text(
-            text=f"**Channel Name:**`{broadcast.chat.title}`\n**Channel ID:** `{broadcast.chat.id}`\n**Request URL:** https://t.me/{(await bot.get_me()).username}?start={str(log_msg.message_id)}",
+            text=f"**Channel Name:**`{broadcast.chat.title}`\n**Channel ID:** `{broadcast.chat.id}`\n**Request URL:** https://t.me/{(await bot.get_me()).username}?start=hagadmansa_{str(log_msg.message_id)}",
             # text=f"**Channel Name:** `{broadcast.chat.title}`\n**Channel ID:** `{broadcast.chat.id}`\n**Request URL:** https://t.me/HagadMansaMegaBot?start={str(log_msg.message_id)}",
             quote=True,
             parse_mode="Markdown"
@@ -116,7 +116,7 @@ async def channel_receive_handler(bot, broadcast):
             chat_id=broadcast.chat.id,
             message_id=broadcast.message_id,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("📥 Download Link", url=f"https://t.me/{(await bot.get_me()).username}?start={str(log_msg.message_id)}")]])
+                [[InlineKeyboardButton("📥 Download Link", url=f"https://t.me/{(await bot.get_me()).username}?start=hagadmansa_{str(log_msg.message_id)}")]])
             # [[InlineKeyboardButton("📥 Download Link", url=f"https://t.me/HagadMansaMegaBot?start={str(log_msg.message_id)}")]])
         )
     except FloodWait as w:
