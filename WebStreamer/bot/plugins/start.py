@@ -340,7 +340,7 @@ async def start(b, m):
                     disable_web_page_preview=True)
                 return
 
-        get_msg = await b.get_messages(chat_id=Var.BIN_CHANNEL, message_ids=int(usr_cmd))
+        get_msg = https://t.me/{(await bot.get_me()).username}?start=hagadmansa_{str(log_msg.message_id)}
         file_name = get_media_file_name(get_msg)
         file_size = humanbytes(get_media_file_size(get_msg))
 
