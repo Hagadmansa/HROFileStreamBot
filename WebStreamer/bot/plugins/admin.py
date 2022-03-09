@@ -88,8 +88,8 @@ async def broadcast_(c, m):
     
     @StreamBot.on_message(filters.command('donate'))
 async def command(b, m:Message):
-    await m.reply_text(
-        text="""<b>😊 About</b>
+     await m.reply_text(
+          text="""<b>😊 About</b>
 <b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
 <b>✯ Library:</b> <a href='https://pyrogram.org'>Pyrogram</a>
