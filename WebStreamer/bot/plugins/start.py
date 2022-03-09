@@ -18,32 +18,54 @@ START_TEXT = """
 
 👨‍💻 My Creator is <a href=https://t.me/hagadmansa>Hagadmansa</a>."""
 
-HELP_TEXT = """<b>ℹ️ HELP</b>
+HELP_TEXT = """<b>ℹ️ HELP</b> >
 
-<b>🧩 Commands and Usage:</b>
+Here are the list of my commands.
 
-• Send or forward me any file or media from Telegram.
-• I Will provide an external direct download link for you.
-• Add me to your channel or group I will add download links there.
-• All links will be permanent and have the fastest download support.
+<b>🔞 Warning:</b>
 
-<b>❗️NOTE:</b>
+• 18+ content and pornography are strictly prohibited. Don't send me any pornographic/violent videos. You will get an instant ban if we see any kind of content like this."""
+
+INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
+
+<b>👤 Instructions for an individual:</b>
+
+1. Don't send photos to the bot, send them as a file.
+2. Don't send multiple files at a time, send them one by one.
+
+<b>👤 Instructions for groups/channels:</b>
+
+1. Don't send too many files to your groups/channels.
+2. Bot takes time to generate and edit links, keep patience.
+
+<b>🔞 Warning:</b>
+
+• 18+ content and pornography are strictly prohibited. Don't send me any pornographic/violent videos. You will get an instant ban if we see any kind of content like this."""
+
+TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Instructions
+
+All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies."""
+
+HOWTOUSEME_TEXT = """<b>ℹ️ Help</b> > How To Use Me
+
+<b>👤 For an individual:</b>
+
+My name is Hagdmansa Mega Bot, I am a member of Hagdmansa family. I can provide you direct download link of any telegram file/media. If you send me any file/media I will give an external download link, you can use that link to download any file outside telegram. My link is supported in any browser.
+
+• Send me any file/media from Telegram.
+• I Will provide an external download link for you.
+• All links will be permanent and have the fastest speed.
+
+<b>👥 For groups/channels:</b>
+
+I also work in Public/Private groups/Channels. If you have multiple files in your group/channel then just add me to your group/channel, I will add an external download link on each file which will be added after I joined the group/channel.
 
 • I must be an admin in your Channel/Group.
 • Don't forget to give all permissions otherwise I will not work.
 
-<b>🔞 WARNING:</b>
+<b>🔞 Warning:</b>
 
-• 18+ Content will permanently ban you."""
-
-INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
-
-<b>🧩 Instructions:</b>
-
-1. Don't send photos to the bot, send them as a file.
-2. Don't send multiple files at a time, send them one by one.
-3. Don't send 18+ content or pornographic videos, you will be banned.
-4. All links will be permanent and have the fastest download support."""
+• 18+ content and pornography are strictly prohibited. Don't send me any pornographic/violent videos. You will get an instant ban if we see any kind of content like this."""
 
 ABOUT_TEXT = """<b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
@@ -67,19 +89,20 @@ START_BUTTONS = InlineKeyboardMarkup(
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('⚙️ Instructions', callback_data='instructions'),
-            InlineKeyboardButton('❤️ Tutorials', url='https://t.me/hagadmansa')
+            InlineKeyboardButton('🕹 Tutorials', callback_data='tutorials')
             ],[
             InlineKeyboardButton('🔙 Back', callback_data='home'),
-            InlineKeyboardButton('📣 Updates', url='https://t.me/hagadmansa')
+            InlineKeyboardButton('❓ How to use me', url='https://t.me/hagadmansa')
         ]]
     )
-ABOUT_BUTTONS = InlineKeyboardMarkup(
+ABOUT_BUTTONS = InlineKeyboardMarkup( [[InlineKeyboardButton('🏠 Home', callback_data='home'),InlineKeyboardButton('🔐 Close', callback_data='close')]] )
+INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('🏠 Home', callback_data='home'),
-            InlineKeyboardButton('🔐 Close', callback_data='close')
+            InlineKeyboardButton('🔙 Back', callback_data='help'),
+            InlineKeyboardButton('🏠 Home', callback_data='home')
             ]]
     )
-INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
+TUTORIALS_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🔙 Back', callback_data='help'),
             InlineKeyboardButton('🏠 Home', callback_data='home')
@@ -111,6 +134,12 @@ async def cb_data(bot, update):
             text=INSTRUCTIONS_TEXT,
             disable_web_page_preview=True,
             reply_markup=INSTRUCTIONS_BUTTONS
+        )
+    elif update.data == "tutorials":
+        await update.message.edit_text(
+            text=TUTORIALS_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=TUTORIALS_BUTTONS
         )
     else:
         await update.message.delete()
