@@ -102,7 +102,7 @@ async def command(b, m:Message):
         
 @StreamBot.on_message(filters.command('new'))
 async def command(b, m:Message):
-    m.reply_document(
+   await m.reply_document(
         document="BQACAgUAAx0CXHCEYQACBAViIvYcPMG4i_-LB2jVpZgBcBqAVgACwQADvjwoVaN-44trVCVZHgQ",
         caption="this is my caption"
     )
