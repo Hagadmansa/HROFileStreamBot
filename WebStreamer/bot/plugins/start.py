@@ -355,7 +355,7 @@ async def start(b, m):
 <b>📂 File Name:</b> <code><i>{}</i></code>\n
 <b>📦 File Size:</b> <i>{}</i>\n
 <b>📥 Download:</b> <i>{}</i>\n
-<b>🚸 Note:</b> This is a permant link.\n
+<b>🚸 Note:</b> This is a permanent link.\n
 <b>🔞 Warning:</b> 18+ Content will permanently ban you."""
 
         await m.reply_text(
