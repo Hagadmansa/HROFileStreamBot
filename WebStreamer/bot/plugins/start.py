@@ -83,27 +83,27 @@ RATING_TEXT = """<b>😊 About</b> > Rating
 
 <b>📣 @hagadmansa</b>
 
-Rate my channel <a href='https://t.me/tlgrmcbot?start=hagadmansa'>here</a>.
+Rate my channel <a href='https://t.me/tlgrmcbot?start=hagadmansa'>here</a>
 
-Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansa-review'>here</a>.
+Review my chsnnel <a href='https://t.me/tlgrmcbot?start=hagadmansa-review'>here</a>
 
 <b>🤖 @hagadmansabot</b>
 
-Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansabot'>here</a>.
+Rate my bot <a href='https://t.me/tlgrmcbot?start=hagadmansabot'>here</a>
 
-Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansabot-review'>here</a>.
+Review my bot <a href='https://t.me/tlgrmcbot?start=hagadmansabot-review'>here</a>
 
 <b>🤖 @hagadmansarobot</b>
 
-Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansarobot'>here</a>.
+Rate my bot <a href='https://t.me/tlgrmcbot?start=hagadmansarobot'>here</a>
 
-Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansarobot-review'>here</a>.
+Review my bot <a href='https://t.me/tlgrmcbot?start=hagadmansarobot-review'>here</a>
 
 <b>🤖 @hagadmansamegabot</b> 
 
-Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot'>here</a>.
+Rate my bot <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot'>here</a>
 
-Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>."""
+Review my bot <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>"""
 
 SOURCE_TEXT = """<b>😊 About</b> > Source
 
