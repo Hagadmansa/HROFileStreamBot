@@ -18,7 +18,7 @@ START_TEXT = """
 
 👨‍💻 My Creator is <a href=https://t.me/hagadmansa>Hagadmansa</a>."""
 
-HELP_TEXT = """<b>ℹ️ HELP</b> >
+HELP_TEXT = """<b>ℹ️ HELP</b>
 
 Here are the list of my commands.
 
@@ -33,7 +33,7 @@ INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
 1. Don't send photos to the bot, send them as a file.
 2. Don't send multiple files at a time, send them one by one.
 
-<b>👤 Instructions for groups/channels:</b>
+<b>👥 Instructions for groups/channels:</b>
 
 1. Don't send too many files to your groups/channels.
 2. Bot takes time to generate and edit links, keep patience.
@@ -42,9 +42,9 @@ INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
 
 • 18+ content and pornography are strictly prohibited. Don't send me any pornographic/violent videos. You will get an instant ban if we see any kind of content like this."""
 
-TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Instructions
+TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Tutorials
 
-All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies."""
+All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. Don't forget to subscribe my updates channel<b>@hagadmansa</b>"""
 
 HOWTOUSEME_TEXT = """<b>ℹ️ Help</b> > How To Use Me
 
@@ -88,21 +88,34 @@ START_BUTTONS = InlineKeyboardMarkup(
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
+            InlineKeyboardButton('❓ How to use me', callback_data='howtouseme')
+            ],[
             InlineKeyboardButton('⚙️ Instructions', callback_data='instructions'),
-            InlineKeyboardButton('🕹 Tutorials', callback_data='tutorials')
+            InlineKeyboardButton('🕹 Tutorials', callback_data='tutorials'),
             ],[
             InlineKeyboardButton('🔙 Back', callback_data='home'),
-            InlineKeyboardButton('❓ How to use me', url='https://t.me/hagadmansa')
+            InlineKeyboardButton('📣 Channel', url='https://t.me/hagadmansa')
         ]]
     )
-ABOUT_BUTTONS = InlineKeyboardMarkup( [[InlineKeyboardButton('🏠 Home', callback_data='home'),InlineKeyboardButton('🔐 Close', callback_data='close')]] )
+ABOUT_BUTTONS = InlineKeyboardMarkup(
+        [[
+             InlineKeyboardButton('🏠 Home', callback_data='home'),
+             InlineKeyboardButton('🔐 Close', callback_data='close')
+        ]] 
+    )
 INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🔙 Back', callback_data='help'),
             InlineKeyboardButton('🏠 Home', callback_data='home')
             ]]
-    )
+   )
 TUTORIALS_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🔙 Back', callback_data='help'),
+            InlineKeyboardButton('🏠 Home', callback_data='home')
+            ]]
+    )
+HOWTOUSEME_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🔙 Back', callback_data='help'),
             InlineKeyboardButton('🏠 Home', callback_data='home')
@@ -140,6 +153,12 @@ async def cb_data(bot, update):
             text=TUTORIALS_TEXT,
             disable_web_page_preview=True,
             reply_markup=TUTORIALS_BUTTONS
+        )
+    elif update.data == "howtouseme":
+        await update.message.edit_text(
+            text=HOWTOUSEME_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=HOWTOUSEME_BUTTONS
         )
     else:
         await update.message.delete()
