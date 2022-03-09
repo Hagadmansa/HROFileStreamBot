@@ -89,7 +89,7 @@ async def broadcast_(c, m):
     @StreamBot.on_message(filters.command('donate'))
 async def command(b, m:Message):
     await m.reply_text(
-        text="<b>😊 About</b>
+        text="""<b>😊 About</b>
 <b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
 <b>✯ Library:</b> <a href='https://pyrogram.org'>Pyrogram</a>
@@ -98,5 +98,5 @@ async def command(b, m:Message):
 <b>✯ Server:</b> <a href='https://heroku.com'>Heroku</a>
 <b>✯ Channel:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
 <b>✯ Group:</b> <a href='https://t.me/hagadmansachat'>Hagadmansa Support</a>
-<b>✯ Brothers:</b> <a href='https://t.me/hagadmansabot'>Hagadmansa Bot</a>, <a href='https://t.me/hagadmansarobot'>Hagadmansa Robot</a>"
+<b>✯ Brothers:</b> <a href='https://t.me/hagadmansabot'>Hagadmansa Bot</a>, <a href='https://t.me/hagadmansarobot'>Hagadmansa Robot</a>"""
     )
