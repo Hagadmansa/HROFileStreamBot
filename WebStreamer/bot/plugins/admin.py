@@ -99,3 +99,10 @@ async def command(b, m:Message):
 <b>✯ Group:</b> <a href='https://t.me/hagadmansachat'>Hagadmansa Support</a>
 <b>✯ Brothers:</b> <a href='https://t.me/hagadmansabot'>Hagadmansa Bot</a>, <a href='https://t.me/hagadmansarobot'>Hagadmansa Robot</a>"""
     )
+        
+@StreamBot.on_message(filters.command('new'))
+async def command(b, m:Message):
+    m.reply_document(
+        document="BQACAgUAAx0CXHCEYQACBAViIvYcPMG4i_-LB2jVpZgBcBqAVgACwQADvjwoVaN-44trVCVZHgQ",
+        caption="this is my caption"
+    )
