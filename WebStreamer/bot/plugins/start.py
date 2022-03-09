@@ -64,7 +64,6 @@ START_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
     )
-
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('⚙️ Instructions', callback_data='instructions'),
@@ -74,14 +73,12 @@ HELP_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('📣 Updates', url='https://t.me/hagadmansa')
         ]]
     )
-
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🏠 Home', callback_data='home'),
             InlineKeyboardButton('🔐 Close', callback_data='close')
             ]]
     )
-
 INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('🔙 Back', callback_data='help'),
