@@ -61,7 +61,7 @@ INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
 
 TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Tutorials
 
-All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. Don't forget to subscribe my updates channel <b>@hagadmansa</b>
+All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. Don't forget to subscribe my updates channel <b>@hagadmansa</b>.
 
 <b>🔞 Warning:</b>
 
@@ -85,23 +85,23 @@ I have a public channel a private channel and 3 bots, along with this also I hav
 
 <b>📣 @hagadmansa</b>
 
-1. Rate my channel <a href='https://t.me/tlgrmcbot?start=hagadmansa'>here</a>
-2. Review my channel <a href='https://t.me/tlgrmcbot?start=hagadmansa-review'>here</a>
+1. Details are <a href='https://t.me/tlgrmcbot?start=hagadmansa'>here</a>
+2. Review this channel <a href='https://t.me/tlgrmcbot?start=hagadmansa-review'>here</a>
 
 <b>🤖 @hagadmansabot</b>
 
-1. Rate my bot <a href='https://t.me/tlgrmcbot?start=hagadmansabot'>here</a>
-2. Review my bot <a href='https://t.me/tlgrmcbot?start=hagadmansabot-review'>here</a>
+1. Details are <a href='https://t.me/tlgrmcbot?start=hagadmansabot'>here</a>
+2. Review this bot <a href='https://t.me/tlgrmcbot?start=hagadmansabot-review'>here</a>
 
 <b>🤖 @hagadmansarobot</b>
 
-1. Rate my bot <a href='https://t.me/tlgrmcbot?start=hagadmansarobot'>here</a>
-2. Review my bot <a href='https://t.me/tlgrmcbot?start=hagadmansarobot-review'>here</a>
+1. Details are <a href='https://t.me/tlgrmcbot?start=hagadmansarobot'>here</a>
+2. Review this bot <a href='https://t.me/tlgrmcbot?start=hagadmansarobot-review'>here</a>
 
 <b>🤖 @hagadmansamegabot</b> 
 
-1. Rate my bot <a href='https://t.me/tlgrmcbot?star=hagadmansamegabot'>here</a>
-2. Review my bot <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>"""
+1. Details are <a href='https://t.me/tlgrmcbot?star=hagadmansamegabot'>here</a>
+2. Review this bot <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>"""
 
 SOURCE_TEXT = """<b>😊 About</b> > Source
 
