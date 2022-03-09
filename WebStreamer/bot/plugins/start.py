@@ -157,7 +157,7 @@ TUTORIALS_BUTTONS = InlineKeyboardMarkup(
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('🌐 Visit Our Website', 📣 Updates', url='https://hagadmansa.com')
+            InlineKeyboardButton('🌐 Visit Our Website', url='https://hagadmansa.com')
             ],[
             InlineKeyboardButton('⭐️ Rating', callback_data='rating'),
             InlineKeyboardButton('❤️ Source', callback_data='source'),
