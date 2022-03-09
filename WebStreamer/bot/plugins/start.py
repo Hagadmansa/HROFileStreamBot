@@ -103,7 +103,7 @@ Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansarobot-review'>
 
 Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot'>here</a>.
 
-Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>.""".
+Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>."""
 
 SOURCE_TEXT = """<b>😊 About</b> > Source
 
@@ -222,22 +222,19 @@ async def cb_data(bot, update):
             text=ABOUT_TEXT,
             disable_web_page_preview=True,
             reply_markup=ABOUT_BUTTONS
-        )
-                
+        )     
     elif update.data == "rating":
         await update.message.edit_text(
             text=RATING_TEXT,
             disable_web_page_preview=True,
             reply_markup=RATING_BUTTONS
-        )
-                
+        )    
     elif update.data == "source":
         await update.message.edit_text(
             text=SOURCE_TEXT,
             disable_web_page_preview=True,
             reply_markup=SOURCE_BUTTONS
-        )
-                
+        )  
     elif update.data == "donate":
         await update.message.edit_text(
             text=DONATE_TEXT,
