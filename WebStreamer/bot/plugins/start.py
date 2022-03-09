@@ -20,7 +20,24 @@ START_TEXT = """
 
 HELP_TEXT = """<b>ℹ️ HELP</b>
 
-Here are the list of my commands.
+Here are the list of my commands."""
+
+HOWTOUSEME_TEXT = """<b>ℹ️ Help</b> > How To Use Me
+
+<b>👤 For an individual:</b>
+
+My name is Hagdmansa Mega Bot, I am a member of Hagdmansa family. I can provide you direct download link of any telegram file/media. If you send me any file/media I will give an external download link, you can use that link to download any file outside telegram. My link is supported in any browser.
+
+• Send me any file/media from Telegram.
+• I Will provide an external download link for you.
+• All links will be permanent and have the fastest speed.
+
+<b>👥 For groups/channels:</b>
+
+I also work in public/private groups/channels. If you have multiple files in your group/channel then just add me to your group/channel, I will add an external download link on each file which will be added after I joined the group/channel.
+
+• I must be an admin in your channel/group.
+• Don't forget to give all permissions otherwise I will not work.
 
 <b>🔞 Warning:</b>
 
@@ -44,30 +61,15 @@ INSTRUCTIONS_TEXT = """<b>ℹ️ Help</b> > Instructions
 
 TUTORIALS_TEXT = """<b>ℹ️ Help</b> > Tutorials
 
-All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. Don't forget to subscribe my updates channel<b>@hagadmansa</b>"""
-
-HOWTOUSEME_TEXT = """<b>ℹ️ Help</b> > How To Use Me
-
-<b>👤 For an individual:</b>
-
-My name is Hagdmansa Mega Bot, I am a member of Hagdmansa family. I can provide you direct download link of any telegram file/media. If you send me any file/media I will give an external download link, you can use that link to download any file outside telegram. My link is supported in any browser.
-
-• Send me any file/media from Telegram.
-• I Will provide an external download link for you.
-• All links will be permanent and have the fastest speed.
-
-<b>👥 For groups/channels:</b>
-
-I also work in Public/Private groups/Channels. If you have multiple files in your group/channel then just add me to your group/channel, I will add an external download link on each file which will be added after I joined the group/channel.
-
-• I must be an admin in your Channel/Group.
-• Don't forget to give all permissions otherwise I will not work.
+All tutorials related to Bots, Website, Movies and etc, will be updated here. Till then you can visit my movie website <b>www.hagadmansa.com</b> to watch movies. Don't forget to subscribe my updates channel<b>@hagadmansa</b>
 
 <b>🔞 Warning:</b>
 
 • 18+ content and pornography are strictly prohibited. Don't send me any pornographic/violent videos. You will get an instant ban if we see any kind of content like this."""
 
-ABOUT_TEXT = """<b>✯ My Name:</b> Hagadmansa Mega Bot
+ABOUT_TEXT = """<b>😊 About</b>
+
+<b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
 <b>✯ Library:</b> <a href='https://pyrogram.org'>Pyrogram</a>
 <b>✯ Language:</b> <a href='https://Python.org'>Python</a>
@@ -76,6 +78,46 @@ ABOUT_TEXT = """<b>✯ My Name:</b> Hagadmansa Mega Bot
 <b>✯ Channel:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
 <b>✯ Group:</b> <a href='https://t.me/hagadmansachat'>Hagadmansa Support</a>
 <b>✯ Brothers:</b> <a href='https://t.me/hagadmansabot'>Hagadmansa Bot</a>, <a href='https://t.me/hagadmansarobot'>Hagadmansa Robot</a>"""
+
+RATING_TEXT = """<b>😊 About</b> > Rating
+
+<b>📣 @hagadmansa</b>
+
+Rate my channel <a href='https://t.me/tlgrmcbot?start=hagadmansa'>here</a>.
+
+Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansa-review'>here</a>.
+
+<b>🤖 @hagadmansabot</b>
+
+Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansabot'>here</a>.
+
+Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansabot-review'>here</a>.
+
+<b>🤖 @hagadmansarobot</b>
+
+Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansarobot'>here</a>.
+
+Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansarobot-review'>here</a>.
+
+<b>🤖 @hagadmansamegabot</b> 
+
+Rate my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot'>here</a>.
+
+Review my website <a href='https://t.me/tlgrmcbot?start=hagadmansamegabot-review'>here</a>
+
+<b>🌐 Our Website - www.hagadmansa.com</b>""".
+
+SOURCE_TEXT = """<b>😊 About</b> > Source
+
+<b>❗️NOTE:</b>
+
+We are not open source yet, if in future we are open our code for everyone then we'll update the source code here."""
+
+DONATE_TEXT = """<b>😊 About</b> > Donate
+
+<b>❗️NOTE:</b>
+
+We are not raising any funds right now, if in future we raise funds then we'll update here."""
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -97,11 +139,11 @@ HELP_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('📣 Channel', url='https://t.me/hagadmansa')
         ]]
     )
-ABOUT_BUTTONS = InlineKeyboardMarkup(
+HOWTOUSEME_BUTTONS = InlineKeyboardMarkup(
         [[
-             InlineKeyboardButton('🏠 Home', callback_data='home'),
-             InlineKeyboardButton('🔐 Close', callback_data='close')
-        ]] 
+            InlineKeyboardButton('🔙 Back', callback_data='help'),
+            InlineKeyboardButton('🏠 Home', callback_data='home')
+            ]]
     )
 INSTRUCTIONS_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -115,9 +157,32 @@ TUTORIALS_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('🏠 Home', callback_data='home')
             ]]
     )
-HOWTOUSEME_BUTTONS = InlineKeyboardMarkup(
+ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('🔙 Back', callback_data='help'),
+            InlineKeyboardButton('🌐 Visit Our Website', 📣 Updates', url='https://hagadmansa.com')
+            ],[
+            InlineKeyboardButton('⭐️ Rating', callback_data='rating'),
+            InlineKeyboardButton('❤️ Source', callback_data='source'),
+            ],[
+            InlineKeyboardButton('🔙 Back', callback_data='home'),
+            InlineKeyboardButton('🤝 Donate', callback_data='donate')
+        ]]
+    )
+RATING_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🔙 Back', callback_data='about'),
+            InlineKeyboardButton('🏠 Home', callback_data='home')
+            ]]
+    )
+SOURCE_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🔙 Back', callback_data='about'),
+            InlineKeyboardButton('🏠 Home', callback_data='home')
+            ]]
+    )
+DONATE_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🔙 Back', callback_data='about'),
             InlineKeyboardButton('🏠 Home', callback_data='home')
             ]]
     )
@@ -135,12 +200,12 @@ async def cb_data(bot, update):
             text=HELP_TEXT,
             disable_web_page_preview=True,
             reply_markup=HELP_BUTTONS
-        )
-    elif update.data == "about":
+         )       
+    elif update.data == "howtouseme":
         await update.message.edit_text(
-            text=ABOUT_TEXT,
+            text=HOWTOUSEME_TEXT,
             disable_web_page_preview=True,
-            reply_markup=ABOUT_BUTTONS
+            reply_markup=HOWTOUSEME_BUTTONS
         )
     elif update.data == "instructions":
         await update.message.edit_text(
@@ -154,11 +219,32 @@ async def cb_data(bot, update):
             disable_web_page_preview=True,
             reply_markup=TUTORIALS_BUTTONS
         )
-    elif update.data == "howtouseme":
+    elif update.data == "about":
         await update.message.edit_text(
-            text=HOWTOUSEME_TEXT,
+            text=ABOUT_TEXT,
             disable_web_page_preview=True,
-            reply_markup=HOWTOUSEME_BUTTONS
+            reply_markup=ABOUT_BUTTONS
+        )
+                
+    elif update.data == "rating":
+        await update.message.edit_text(
+            text=RATING_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=RATING_BUTTONS
+        )
+                
+    elif update.data == "source":
+        await update.message.edit_text(
+            text=SOURCE_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=SOURCE_BUTTONS
+        )
+                
+    elif update.data == "donate":
+        await update.message.edit_text(
+            text=DONATE_TEXT,
+            disable_web_page_preview=True,
+            reply_markup=DONATE_BUTTONS
         )
     else:
         await update.message.delete()
