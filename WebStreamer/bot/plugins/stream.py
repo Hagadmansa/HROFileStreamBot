@@ -33,7 +33,7 @@ async def private_receive_handler(c: Client, m: Message):
         await db.add_user(m.from_user.id)
         await c.send_message(
             Var.BIN_CHANNEL,
-            f"New User Joined \n\nName: [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started your bot!"
+            f"[{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started bot."
         )
     if Var.UPDATES_CHANNEL != "None":
         try:
@@ -49,7 +49,7 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="""<i>🔐 Join my channel to use me.</i>""",
+                text="""🔐 Join my channel to use me.""",
                 reply_markup=InlineKeyboardMarkup(
                     [[ InlineKeyboardButton("📡 Join Now", url=f"https://t.me/{Var.UPDATES_CHANNEL}") ]]
                 ),
@@ -81,7 +81,7 @@ async def private_receive_handler(c: Client, m: Message):
 <b>🚸 Note:</b> This is a permant link.\n
 <b>🔞 Warning:</b> 18+ Content will permanently ban you."""
 
-        await log_msg.reply_text(text=f"<b>Requested by:</b>`[{m.from_user.first_name}](tg://user?id={m.from_user.id})\n<b>User ID:<b/>`{m.from_user.id}`\n<b>Download Link:</B> {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
+        await log_msg.reply_text(text=f"**Requested by:**`[{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**User ID:**`{m.from_user.id}`\nDownload Link:{stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
             text=msg_text.format(file_name, file_size, stream_link),
             parse_mode="HTML", 
