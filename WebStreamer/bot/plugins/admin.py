@@ -100,7 +100,7 @@ async def command(b, m:Message):
 <b>✯ Brothers:</b> <a href='https://t.me/hagadmansabot'>Hagadmansa Bot</a>, <a href='https://t.me/hagadmansarobot'>Hagadmansa Robot</a>"""
     )
         
-@StreamBot.on_message(filters.command('your command'))
+@StreamBot.on_message(filters.command('new'))
 async def command(b, m:Message):
     m.reply_photo(
         photo="https://finaltestingbot.herokuapp.com/74/IMG_0441.JPG",
