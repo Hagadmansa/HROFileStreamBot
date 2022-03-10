@@ -16,6 +16,7 @@ async def root_route_handler(request):
     return web.json_response({"status": "running",
                               "maintained_by": "HagadMansa",
                               "server_permission": "Open",
+                              "Website": "www.hagadmansa.com",
                               "Telegram_Bot": '@'+bot_details.username})
 
 
