@@ -85,8 +85,8 @@ async def broadcast_(c, m):
         )
     os.remove('broadcast.txt')
    
-@StreamBot.on_message(filters.command('text'))
+@StreamBot.on_message(filters.command('howtouseme'))
 async def command(b, m:Message):
     await m.reply_text(
-        text="Hi {m.from_user.mention}, ✅ Send me a file to get an instant stream link."
+        text="HOWTOUSEME_TEXT"
     )
