@@ -85,10 +85,10 @@ async def broadcast_(c, m):
         )
     os.remove('broadcast.txt')
     
-@StreamBot.on_message(filters.private & filters.command(["howtouseme"]))
-async def start(bot, update):
-    await update.reply_text(
-        text=HOWTOUSEME_TEXT.format(update.from_user.mention),
+@StreamBot.on_message(filters.command("howtouseme"))
+async def start(m:message):
+    await m.reply_text(
+        text=HOWTOUSEME_TEXT,
         disable_web_page_preview=True,
         reply_markup=HOWTOUSEME_BUTTONS
     )
