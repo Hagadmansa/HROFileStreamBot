@@ -90,7 +90,7 @@ async def private_receive_handler(c: Client, m: Message):
             [[
             InlineKeyboardButton('📥 Download', url='stream_link'),
             InlineKeyboardButton('🔗 Share', url='https://t.me/share?url=stream_link')
-            ]],
+            ]]),
             quote=True
         )
     except FloodWait as e:
