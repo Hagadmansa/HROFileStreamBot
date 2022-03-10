@@ -88,7 +88,5 @@ async def broadcast_(c, m):
 @StreamBot.on_message(filters.command("howtouseme"))
 async def start(m:message):
     await m.reply_text(
-        text=HOWTOUSEME_TEXT,
-        disable_web_page_preview=True,
-        reply_markup=HOWTOUSEME_BUTTONS
+        text='Hi {m.from_user.mention(style="md")}, ✅ Send me a file to get an instant stream link.'
     )
