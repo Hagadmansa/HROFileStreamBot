@@ -85,24 +85,10 @@ async def broadcast_(c, m):
         )
     os.remove('broadcast.txt')
     
-@StreamBot.on_message(filters.command('donate'))
-async def command(b, m:Message):
-     await m.reply_text(
-          text="""<b>😊 About</b>
-<b>✯ My Name:</b> Hagadmansa Mega Bot
-<b>✯ Creator:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
-<b>✯ Library:</b> <a href='https://pyrogram.org'>Pyrogram</a>
-<b>✯ Language:</b> <a href='https://Python.org'>Python</a>
-<b>✯ Database:</b> <a href='https://mongodb.com'>MongoDB</a>
-<b>✯ Server:</b> <a href='https://heroku.com'>Heroku</a>
-<b>✯ Channel:</b> <a href='https://t.me/hagadmansa'>Hagadmansa</a>
-<b>✯ Group:</b> <a href='https://t.me/hagadmansachat'>Hagadmansa Support</a>
-<b>✯ Brothers:</b> <a href='https://t.me/hagadmansabot'>Hagadmansa Bot</a>, <a href='https://t.me/hagadmansarobot'>Hagadmansa Robot</a>"""
-    )
-        
-@StreamBot.on_message(filters.command('new'))
-async def command(b, m:Message):
-    m.reply_photo(
-        photo="https://finaltestingbot.herokuapp.com/74/IMG_0441.JPG",
-        caption="This is my caption"
+@StreamBot.on_message(filters.private & filters.command(["howtouseme"]))
+async def start(bot, update):
+    await update.reply_text(
+        text=HOWTOUSEME_TEXT.format(update.from_user.mention),
+        disable_web_page_preview=True,
+        reply_markup=HOWTOUSEME_BUTTONS
     )
