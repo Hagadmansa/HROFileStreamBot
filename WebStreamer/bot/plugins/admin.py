@@ -88,5 +88,7 @@ async def broadcast_(c, m):
 @StreamBot.on_message(filters.command('howtouseme'))
 async def command(b, m:Message):
     await m.reply_text(
-        text="HOWTOUSEME_TEXT"
+        text=ABOUT_TEXT.format(update.from_user.mention),
+        disable_web_page_preview=True,
+        reply_markup=ABOUT_BUTTONS
     )
